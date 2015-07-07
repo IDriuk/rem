@@ -1,0 +1,16 @@
+meteor create mosk
+mkdir client server public private
+meteor add reactjs:react
+meteor reset
+meteor mongo (when app is running)
+
+meteor add accounts-base accounts-password accounts-ui
+{{> loginButtons}}
+meteor add accounts-github
+meteor add email
+
+meteor remove autopublish
+meteor remove insecure
+
+meteor add iron:router
+meteor add twbs:­bootstrap
