@@ -3,6 +3,11 @@ var Main = ReactMeteor.createClass({
   startMeteorSubscriptions: function(){},
   getMeteorState: function(){},
   render: function() {
-    return <div> <SelectWrapper/> </div>;
+    return (
+              <div>
+                <SelectWrapper/>
+                <ContentWrapper/> 
+              </div>
+            );
   }
 });
