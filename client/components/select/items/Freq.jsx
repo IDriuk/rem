@@ -1,7 +1,7 @@
 Freq = React.createClass({
   render: function () {
     return (
-      <div>Freq</div>
+      <div className="col-sm-12">Freq</div>
     );
   }
 });

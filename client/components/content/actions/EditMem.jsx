@@ -1,7 +1,7 @@
 EditMem = React.createClass({
   render: function () {
     return (
-      <div>EditMem</div>
+      <div className="col-sm-1" >Edit</div>
     );
   }
 });

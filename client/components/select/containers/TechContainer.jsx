@@ -1,5 +1,9 @@
 TechContainer = React.createClass({
   render: function() {
-    return <div><Tech /></div>;
+    return (
+              <div className="row">
+                <Tech />
+              </div>
+           );
   }
 });

@@ -1,7 +1,7 @@
 NewMem = React.createClass({
   render: function () {
     return (
-      <div> NewMem </div>
+      <div className="col-sm-1"> New </div>
     );
   }
 });

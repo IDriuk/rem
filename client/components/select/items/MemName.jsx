@@ -1,7 +1,7 @@
 MemName = React.createClass({
   render: function () {
     return (
-      <div>MemName</div>
+      <div className="col-sm-12">MemName</div>
     );
   }
 });

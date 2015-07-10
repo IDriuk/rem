@@ -1,7 +1,7 @@
 ContentWrapper = React.createClass({
   render: function () {
     return (
-      <div>
+      <div className="col-sm-8">
         <MemsContainer />
         <ActionsContainer />
       </div>

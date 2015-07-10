@@ -1,7 +1,7 @@
 Tech = React.createClass({
   render: function () {
     return (
-      <div>Tech</div>
+      <div className="col-sm-12">Tech</div>
     );
   }
 });

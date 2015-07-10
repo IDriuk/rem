@@ -1,7 +1,9 @@
 SortContainer = React.createClass({
   render: function() {
     return (
-      <div><SortParam /></div>
-    );
+              <div className="row">
+                <SortParam />
+              </div>
+          );
   }
 });

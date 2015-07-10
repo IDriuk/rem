@@ -1,7 +1,7 @@
 SortParam = React.createClass({
   render: function () {
     return (
-      <div>Sort Param</div>
+      <div className="col-sm-12">Sort Param</div>
     );
   }
 });

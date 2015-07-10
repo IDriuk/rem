@@ -1,7 +1,9 @@
 FreqContainer = React.createClass({
   render: function() {
     return (
-      <div><Freq /></div>
-    );
+              <div className="row">
+                <Freq />
+              </div>
+            );
   }
 });

@@ -1,7 +1,7 @@
 SaveMem = React.createClass({
   render: function() {
     return (
-      <div>SaveMem</div>
+      <div className="col-sm-1">Save</div>
     );
   }
 });

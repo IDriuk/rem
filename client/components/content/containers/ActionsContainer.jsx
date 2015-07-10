@@ -1,7 +1,7 @@
 ActionsContainer = React.createClass({
   render: function () {
     return (
-      <div>
+      <div className="row">
         <NewMem/>
         <EditMem/>
         <SaveMem/>

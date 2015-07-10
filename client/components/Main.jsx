@@ -4,9 +4,11 @@ var Main = ReactMeteor.createClass({
   getMeteorState: function(){},
   render: function() {
     return (
-              <div>
-                <SelectWrapper/>
-                <ContentWrapper/> 
+              <div className="container">
+                <div className="row">
+                  <SelectWrapper/>
+                  <ContentWrapper/>
+                </div> 
               </div>
             );
   }

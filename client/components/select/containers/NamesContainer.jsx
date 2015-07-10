@@ -1,7 +1,9 @@
 NamesContainer = React.createClass({
   render: function() {
     return (
-      <div><MemName /></div>
-    );
+            <div className="row">
+              <MemName />
+            </div>
+          );
   }
 });
