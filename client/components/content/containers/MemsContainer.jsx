@@ -1,8 +1,9 @@
 MemsContainer = React.createClass({
   render: function () {
+    this.displayMemContent = false;
     return (
       <div className="row">
-        <MemContent/>
+        { this.displayMemContent && <MemContent/> }
         <MemContentEdit/>
       </div>
     );

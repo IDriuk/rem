@@ -7,10 +7,10 @@ TechContainer = React.createClass({
     );
   },
   render: function() {
-    var imgs = ["/js_logo2.png",
-                "/jquery_logo1.png",
-                "/react_logo1.png",
-                "/meteor_logo.png"];
+    var imgs = ["/logo/js.png",
+                "/logo/jquery.png",
+                "/logo/react.png",
+                "/logo/meteor.png"];
     return (
               <div className="row">
                 {imgs.map(this.renderTech)}

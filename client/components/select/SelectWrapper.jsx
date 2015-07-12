@@ -4,7 +4,6 @@ SelectWrapper = React.createClass({
       <div className="col-sm-4">
         <TechContainer/>
         <FreqContainer/>
-        <SortContainer/>
         <NamesContainer/>
       </div>
     );
