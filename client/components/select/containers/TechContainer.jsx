@@ -1,16 +1,20 @@
 TechContainer = React.createClass({
+
+  handleChoose: function(techName) {
+	Session.set('selected_tech', techName);
+  },
+  
   renderTech: function(src) {
     return (
       <Tech
-        src = {src}
+	    handleChoose = {this.handleChoose.bind(this, src)}
+        src = {"/logo/" + src + ".png"}
       />
     );
   },
+  
   render: function() {
-    var imgs = ["/logo/js.png",
-                "/logo/jquery.png",
-                "/logo/react.png",
-                "/logo/meteor.png"];
+    var imgs = ["js", "jquery", "react", "meteor"];
     return (
               <div className="row">
                 {imgs.map(this.renderTech)}
