@@ -6,6 +6,10 @@ Meteor.methods({
 	saveMem: function(mem) {
 	  console.log(mem);
 	  console.log("save");
+	  Mems.insert({
+	    name: "name",
+		secondName: "secondName"
+	  });
 	},
 	editMem: function(mem) {
 	  console.log(mem);
