@@ -1,6 +1,11 @@
 EditMem = React.createClass({
   handleEdit: function () {
     alert('handle Edit');
+	var obj = {
+	  selected_freq: Session.get('selected_freq'),
+	  selected_tech: Session.get('selected_tech')
+	};
+	Meteor.call('editMem', obj);
   },
   render: function () {
     return (

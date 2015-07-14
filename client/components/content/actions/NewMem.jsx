@@ -1,6 +1,11 @@
 NewMem = React.createClass({
   handleNew: function () {
     alert('handle New');
+	var obj = {
+	  selected_freq: Session.get('selected_freq'),
+	  selected_tech: Session.get('selected_tech')
+	};
+	Meteor.call('newMem', obj);
   },
   render: function () {
     return (

@@ -1,6 +1,8 @@
 var Main = ReactMeteor.createClass({
   templateName: 'Main',
-  startMeteorSubscriptions: function(){},
+  startMeteorSubscriptions: function(){
+	Meteor.subscribe('mems');
+  },
   getMeteorState: function(){},
   render: function() {
     return (
