@@ -2,9 +2,12 @@ SaveMem = React.createClass({
   handleSave: function () {
     alert('handle Save');
 	var obj = {
-	  selected_freq: Session.get('selected_freq'),
-	  selected_tech: Session.get('selected_tech')
+	  name: $('#newname').val(),
+	  content: $('#newcontent').val(),
+	  freq: Session.get('selected_freq'),
+	  tech: Session.get('selected_tech'),
 	};
+	
 	Meteor.call('saveMem', obj);
   },
   render: function() {
