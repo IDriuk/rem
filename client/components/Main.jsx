@@ -3,13 +3,17 @@ var Main = ReactMeteor.createClass({
   startMeteorSubscriptions: function(){
 	Meteor.subscribe('mems');
   },
-  getMeteorState: function(){},
+  getMeteorState: function(){
+    return {
+	  mems: Mems.find({}).fetch()
+	};
+  },
   render: function() {
     return (
               <div className="container">
                 <div className="row">
-                  <SelectWrapper/>
-                  <ContentWrapper/>
+                  <SelectWrapper mems={this.state.mems} />
+                  <ContentWrapper />
                 </div> 
               </div>
             );
