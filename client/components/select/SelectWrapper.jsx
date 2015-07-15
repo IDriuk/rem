@@ -1,10 +1,16 @@
 SelectWrapper = React.createClass({
+  handleClick: function (name) {
+	this.props.handleSelect(name);
+  },
   render: function() {
     return (
       <div className="col-sm-4">
         <TechContainer/>
         <FreqContainer/>
-        <NamesContainer mems={this.props.mems} />
+        <NamesContainer 
+			mems={this.props.mems}
+			onClick = {this.handleClick}
+		/>
       </div>
     );
   }

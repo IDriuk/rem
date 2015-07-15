@@ -8,11 +8,17 @@ var Main = ReactMeteor.createClass({
 	  mems: Mems.find({}).fetch()
 	};
   },
+  handleSelect: function(name) {
+    alert(name);
+  },
   render: function() {
     return (
               <div className="container">
                 <div className="row">
-                  <SelectWrapper mems={this.state.mems} />
+                  <SelectWrapper 
+					mems={this.state.mems} 
+					handleSelect = {this.handleSelect}
+					/>
                   <ContentWrapper />
                 </div> 
               </div>
