@@ -9,7 +9,9 @@ var Main = ReactMeteor.createClass({
 	};
   },
   handleSelect: function(name) {
-    alert(name);
+	this.setState({
+		mem: Mems.findOne({name: name})
+	});
   },
   render: function() {
     return (
@@ -19,7 +21,9 @@ var Main = ReactMeteor.createClass({
 					mems={this.state.mems} 
 					handleSelect = {this.handleSelect}
 					/>
-                  <ContentWrapper />
+                  <ContentWrapper 
+					mem={this.state.mem}
+				  />
                 </div> 
               </div>
             );
