@@ -10,7 +10,18 @@ var Main = ReactMeteor.createClass({
   },
   handleSelect: function(name) {
 	this.setState({
-		mem: Mems.findOne({name: name})
+		mem: Mems.findOne({name: name}),
+		edit: false
+	});
+  },
+  handleEdit: function() {
+	this.setState({
+		edit: true
+	});
+  },
+  handleNew: function() {
+	this.setState({
+		mem: false
 	});
   },
   render: function() {
@@ -23,6 +34,9 @@ var Main = ReactMeteor.createClass({
 					/>
                   <ContentWrapper 
 					mem={this.state.mem}
+					edit={this.state.edit}
+					handleEdit={this.handleEdit}
+					handleNew={this.handleNew}
 				  />
                 </div> 
               </div>

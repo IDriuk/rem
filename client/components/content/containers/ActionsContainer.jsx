@@ -2,10 +2,10 @@ ActionsContainer = React.createClass({
   render: function () {
     return (
       <div className="row">
-        <NewMem/>
-        <EditMem/>
+        <NewMem handleNew={this.props.handleNew} />
+        <EditMem handleEdit={this.props.handleEdit} />
         <SaveMem/>
-        <RemoveMem/>
+        <RemoveMem handleDelete={this.props.handleDelete} />
       </div>
     );
   }

@@ -15,5 +15,6 @@ Meteor.methods({
 	removeMem: function(mem) {
 	  console.log(mem);
 	  console.log("remove");
+	  Mems.remove(mem);
 	}
 });

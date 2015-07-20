@@ -1,11 +1,12 @@
 RemoveMem = React.createClass({
   handleRemove: function () {
     alert('handle Remove');
-	var obj = {
+	/* var obj = {
 	  selected_freq: Session.get('selected_freq'),
 	  selected_tech: Session.get('selected_tech')
 	};
-	Meteor.call('removeMem', obj);
+	Meteor.call('removeMem', obj); */
+	this.props.handleDelete();
   },
   render: function () {
     return (
