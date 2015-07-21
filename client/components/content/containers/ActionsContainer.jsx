@@ -4,7 +4,7 @@ ActionsContainer = React.createClass({
       <div className="row">
         <NewMem handleNew={this.props.handleNew} />
         <EditMem handleEdit={this.props.handleEdit} />
-        <SaveMem/>
+        <SaveMem handleSave={this.props.handleSave}/>
         <RemoveMem handleDelete={this.props.handleDelete} />
       </div>
     );

@@ -19,6 +19,19 @@ var Main = ReactMeteor.createClass({
 		edit: true
 	});
   },
+  handleSave: function(obj) {
+    console.log("Top handle Save");
+	console.log(obj);
+	console.log(this.state.mem);
+	console.log(this.state.edit);
+	
+	if (this.state.edit) {
+	  obj._id = this.state.mem._id;
+	  Meteor.call('editMem', obj);
+	} else {
+	  Meteor.call('saveMem', obj)
+	}
+  },
   handleNew: function() {
 	this.setState({
 		mem: false
@@ -37,6 +50,7 @@ var Main = ReactMeteor.createClass({
 					edit={this.state.edit}
 					handleEdit={this.handleEdit}
 					handleNew={this.handleNew}
+					handleSave={this.handleSave}
 				  />
                 </div> 
               </div>

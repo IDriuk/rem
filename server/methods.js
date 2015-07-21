@@ -11,6 +11,7 @@ Meteor.methods({
 	editMem: function(mem) {
 	  console.log(mem);
 	  console.log("edit");
+	  Mems.update(mem._id, mem);
 	},
 	removeMem: function(mem) {
 	  console.log(mem);

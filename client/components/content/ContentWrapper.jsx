@@ -14,6 +14,7 @@ ContentWrapper = React.createClass({
 			handleEdit={this.props.handleEdit}
 			handleNew={this.props.handleNew}
 			handleDelete={this.handleDelete}
+			handleSave={this.props.handleSave}
 			/>
       </div>
     );

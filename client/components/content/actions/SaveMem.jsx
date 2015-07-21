@@ -8,7 +8,9 @@ SaveMem = React.createClass({
 	  tech: Session.get('selected_tech'),
 	};
 	
-	Meteor.call('saveMem', obj);
+	this.props.handleSave(obj);
+	
+	// Meteor.call('saveMem', obj);
   },
   render: function() {
     return (
