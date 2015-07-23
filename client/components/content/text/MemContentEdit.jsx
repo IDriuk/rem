@@ -19,7 +19,7 @@ MemContentEdit = React.createClass({
     return (
       <div className="col-sm-12">
         <input className="form-control" placeholder={this.state.name} value={this.state.name} id="newname" onChange={this.handleChange}></input>
-        <textarea className="form-control" placeholder="content" rows="20" id="newcontent"  >{this.state.content}</textarea>
+        <textarea className="form-control" placeholder="content" rows="20" id="newcontent"  defaultValue={this.state.content} ></textarea>
       </div>
     );
   }

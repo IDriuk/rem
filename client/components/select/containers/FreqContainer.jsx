@@ -7,14 +7,15 @@ FreqContainer = React.createClass({
   renderFreq: function(freq) {
     return (
             <Freq
-              frequency={"/logo/" + freq + ".png"}
+              src={"/logo/" + freq + ".png"}
 			  handleChoose = {this.handleChoose.bind(this, freq)}
+			  key={freq}
             />
         );
   },
   
   render: function() {
-    var freqs = ["frequently", "monkey" , "bow"];
+    var freqs = ["often", "monkey" , "bow"];
     return (
               <div className="row">
                 {freqs.map(this.renderFreq)}

@@ -16,7 +16,7 @@ Freq = React.createClass({
 	
     return (
       <div className="col-sm-3" onClick={this.handleChoose} style={{marginTop: margin }}>
-        <img src={this.props.frequency} />
+        <img src={this.props.src} />
       </div>
     );
   }

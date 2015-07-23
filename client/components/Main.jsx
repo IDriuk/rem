@@ -4,8 +4,19 @@ var Main = ReactMeteor.createClass({
 	Meteor.subscribe('mems');
   },
   getMeteorState: function(){
+	var query = {};
+	
+	if (this.state && this.state.query) {
+	  query = {
+					freq: {$in: ["bow", "monkey", "frequently"]},
+					tech: {$in: ["react", "js", "jquery"]}
+					};
+	  query = this.state.query;
+	};
+	
     return {
-	  mems: Mems.find({}).fetch()
+	  mems: Mems.find(query).fetch(),
+	  mode: Session.get('mode')
 	};
   },
   handleSelect: function(name) {
@@ -20,16 +31,12 @@ var Main = ReactMeteor.createClass({
 	});
   },
   handleSave: function(obj) {
-    console.log("Top handle Save");
-	console.log(obj);
-	console.log(this.state.mem);
-	console.log(this.state.edit);
 	
 	if (this.state.edit) {
 	  obj._id = this.state.mem._id;
 	  Meteor.call('editMem', obj);
 	} else {
-	  Meteor.call('saveMem', obj)
+	  Meteor.call('saveMem', obj);
 	}
   },
   handleNew: function() {

@@ -9,6 +9,7 @@ TechContainer = React.createClass({
       <Tech
 	    handleChoose = {this.handleChoose.bind(this, src)}
         src = {"/logo/" + src + ".png"}
+		key = {src}
       />
     );
   },
