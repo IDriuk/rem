@@ -7,6 +7,7 @@ SelectWrapper = React.createClass({
       <div className="col-sm-4">
         <TechContainer/>
         <FreqContainer/>
+		<ActContainer/>
         <NamesContainer 
 			mems={this.props.mems}
 			onClick = {this.handleClick}
