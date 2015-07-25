@@ -1,21 +1,23 @@
 Freq = React.createClass({
-  handleChoose: function() {
+  selectFreq: function() {
     if (this.state && this.state.margin == 20) {
 		this.setState({margin: 0});
 	} else {
 		this.setState({margin: 20});
 	}
-	this.props.handleChoose();
+    this.props.selectFreq();
   },
+
   render: function () {
-	var margin = 0;
- 
-	if (this.state) {
-		margin = this.state.margin; 
-	}
-	
+    var margin = 0;
+    var freq = this.props.freq;
+    var ar = Session.get('freq');
+    if (ar.indexOf(freq) > -1) {
+      margin = 20;
+    }
+
     return (
-      <div className="col-sm-3" onClick={this.handleChoose} style={{marginTop: margin }}>
+      <div className="col-sm-3" onClick={this.selectFreq} style={{marginTop: margin }}>
         <img src={this.props.src} />
       </div>
     );

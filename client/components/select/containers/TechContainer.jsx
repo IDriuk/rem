@@ -1,24 +1,35 @@
 TechContainer = React.createClass({
 
-  handleChoose: function(techName) {
-	Session.set('selected_tech', techName);
+  selectTech: function(tech) {
+
+    if (this.props.mode == 'view') {
+      var ar = Session.get('tech');
+      var index = ar.indexOf(tech);
+      index > -1 ? ar.splice(index, 1) : ar.push(tech);
+      Session.set('tech', ar);
+    } else {
+      Session.set('tech', [tech]);
+    }
+
+    this.props.selectTech();
   },
-  
+
   renderTech: function(src) {
     return (
       <Tech
-	    handleChoose = {this.handleChoose.bind(this, src)}
+        selectTech = {this.selectTech.bind(this, src)}
         src = {"/logo/" + src + ".png"}
-		key = {src}
+        key = {src}
+        tech = {src}
       />
     );
   },
-  
+
   render: function() {
-    var imgs = ["js", "jquery", "react", "meteor"];
+    var techs = ["js", "jquery", "react", "meteor"];
     return (
               <div className="row">
-                {imgs.map(this.renderTech)}
+                {techs.map(this.renderTech)}
               </div>
            );
   }

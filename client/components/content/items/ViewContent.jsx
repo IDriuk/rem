@@ -1,12 +1,12 @@
-MemContent = React.createClass({
+ViewContent = React.createClass({
   render: function () {
+    var name = this.props.mem ? this.props.mem.name : '';
+    var content = this.props.mem ? this.props.mem.content : '';
     return (
       <div className="col-sm-12">
-		<label>Name </label>
-		<p>{this.props.mem.name}</p>
-		<label>Content </label>
-		<p>{this.props.mem.content}</p>
-	  </div>
+		      <label>{name}</label>
+		      <p>{content}</p>
+	   </div>
     );
   }
 });

@@ -1,7 +1,7 @@
 MemName = React.createClass({
   render: function () {
     return (
-      <div className="col-sm-12" onClick={this.props.onClick}>
+      <div className="col-sm-12" onClick={this.props.selectName}>
         <span className="alert-info">{this.props.name}</span>
       </div>
     );

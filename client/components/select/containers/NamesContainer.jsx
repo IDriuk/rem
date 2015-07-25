@@ -1,13 +1,13 @@
 NamesContainer = React.createClass({
-  handleClick: function(name) {
-	this.props.onClick(name);
+  selectName: function(name) {
+	   this.props.selectName(name);
   },
   renderName: function(mem) {
     return (
 			<MemName
 				key={mem._id}
 				name={mem.name}
-				onClick = {this.handleClick.bind(this, mem.name)}
+				selectName = {this.selectName.bind(this, mem.name)}
 				/>
 	);
   },
