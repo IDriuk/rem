@@ -43,7 +43,7 @@ ActContainer = React.createClass({
       if (this.props.mode == "edit") {
         this.updateMem();
       }
-      this.props.setMode('view');
+      //this.props.setMode('view');
     } else {
       this.deleteMem();
       this.props.setMode('view');
@@ -51,11 +51,27 @@ ActContainer = React.createClass({
   },
 
   renderAct: function (act) {
+    var mem = this.props.mem;
+    var display = "none";
+
+    if (mem && (act == 'edit' || act == "delete")
+                    && this.props.mode == 'view') {
+      display = "block";
+    }
+    if (act == 'create' && this.props.mode == "view") {
+      display = "block";
+    }
+    if (act == 'save'
+        && (this.props.mode == "create" || this.props.mode == "edit")) {
+      display = "block";
+    }
+
     return (
   		<Act
   			key={act}
   			src={"/acts/" + act + ".png"}
         setMode={this.setMode.bind(this, act)}
+        display={display}
   		/>
 	  );
   },
@@ -70,7 +86,7 @@ ActContainer = React.createClass({
 	var acts = ["create", "edit", "save", "delete"];
     return (
       <div className="row">
-        <div className="col-sm-4">
+        <div className="col-sm-6">
           <input className="form-control" type="text"
                  placeholder="search"
                  ref="search"
