@@ -20,8 +20,8 @@ SelectWrapper = React.createClass({
           selectFreq = {this.props.selectFreq}
         />
         <NamesContainer
-			       mems={this.props.mems}
-			       selectName = {this.selectName}
+          mems={this.props.mems}
+          selectName = {this.selectName}
 		    />
       </div>
     );

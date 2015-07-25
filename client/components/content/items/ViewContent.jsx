@@ -5,7 +5,12 @@ ViewContent = React.createClass({
     return (
       <div className="col-sm-12">
 		      <label>{name}</label>
-		      <p>{content}</p>
+          <div
+            className="content"
+            dangerouslySetInnerHTML={{
+              __html: marked(content, {sanitize: true})
+            }}
+          />
 	   </div>
     );
   }
