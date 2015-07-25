@@ -57,8 +57,17 @@ var Main = ReactMeteor.createClass({
 
   setMode: function(mode) {
     Session.set('mode', mode);
-    Session.set('tech', []);
-    Session.set('freq', []);
+    if (mode != 'view') {
+      Session.set('tech', []);
+      Session.set('freq', []);
+    }
+
+    if (mode == 'edit' && this.state.mem) {
+      Session.set('tech', [this.state.mem.tech]);
+      Session.set('freq', [this.state.mem.freq]);
+      this.selectTech();
+      this.selectFreq();
+    }
 
     this.setState({
       mode: Session.get('mode')
@@ -76,10 +85,11 @@ var Main = ReactMeteor.createClass({
               <div className="container">
                 <div className="row">
                   <SelectWrapper
+                    mem = {this.state.mem}
+                    mode = {this.state.mode}
                     mems = {this.state.mems}
                     tech = {this.state.tech}
                     freq = {this.state.freq}
-                    mode = {this.state.mode}
                     setMode = {this.setMode}
                     selectName = {this.selectName}
                     selectFreq = {this.selectFreq}
@@ -87,8 +97,8 @@ var Main = ReactMeteor.createClass({
                     searchMem = {this.searchMem}
 					        />
                   <MemsContainer
-                    mode = {this.state.mode}
                     mem = {this.state.mem}
+                    mode = {this.state.mode}
                   />
                 </div>
               </div>

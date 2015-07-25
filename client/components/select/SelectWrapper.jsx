@@ -6,6 +6,8 @@ SelectWrapper = React.createClass({
     return (
       <div className="col-sm-4">
         <ActContainer
+          mem = {this.props.mem}
+          mode = {this.props.mode}
           setMode = {this.props.setMode}
           searchMem = {this.props.searchMem}
         />
