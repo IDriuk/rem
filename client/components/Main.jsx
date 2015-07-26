@@ -24,7 +24,7 @@ var Main = ReactMeteor.createClass({
 
     var search = Session.get('search');
     if (search && search.length > 0) {
-      var name = {$regex: ('^' + search)};
+      var name = {$regex: (search)};
       query.name = name;
     }
 

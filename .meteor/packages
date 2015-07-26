@@ -11,5 +11,5 @@ twbs:bootstrap
 chuangbo:marked
 accounts-base
 accounts-password
-accounts-ui
 email
+accounts-ui
