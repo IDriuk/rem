@@ -6,6 +6,7 @@ Act = React.createClass({
         <img
           src={this.props.src}
           onClick = {this.props.setMode}
+          className="action-button"
           />
       </div>
     );
