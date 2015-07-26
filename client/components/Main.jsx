@@ -29,7 +29,7 @@ var Main = ReactMeteor.createClass({
     }
 
     return {
-	     mems: Mems.find(query).fetch(),
+	     mems: Mems.find(query, {sort: {name: 1}}).fetch(),
        mode: Session.get('mode'),
        tech: Session.get('tech'),
        freq: Session.get('freq')

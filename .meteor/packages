@@ -9,3 +9,7 @@ reactjs:react
 iron:router
 twbs:bootstrap
 chuangbo:marked
+accounts-base
+accounts-password
+accounts-ui
+email
