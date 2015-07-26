@@ -85,12 +85,15 @@ ActContainer = React.createClass({
   render: function () {
 	var acts = ["create", "edit", "save", "delete"];
     return (
-      <div className="row">
+      <div className="row"
+           style = {{marginBottom: 10}}
+           >
         <div className="col-sm-6">
           <input className="form-control" type="text"
                  placeholder="search"
                  ref="search"
                  onChange = {this.searchMem}
+                 style = {{marginBottom: 5}}
                  ></input>
         </div>
 		    {acts.map(this.renderAct)}

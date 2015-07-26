@@ -28,7 +28,9 @@ TechContainer = React.createClass({
   render: function() {
     var techs = ["js", "jquery", "react", "meteor"];
     return (
-              <div className="row">
+              <div className="row"
+                   style={{marginBottom: 10}}
+                  >
                 {techs.map(this.renderTech)}
               </div>
            );

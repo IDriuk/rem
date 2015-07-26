@@ -28,7 +28,9 @@ FreqContainer = React.createClass({
   render: function() {
     var freqs = ["often", "monkey" , "bow"];
     return (
-              <div className="row">
+              <div className="row"
+                   style={{marginBottom: 20}}
+                  >
                 {freqs.map(this.renderFreq)}
               </div>
            );

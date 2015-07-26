@@ -13,7 +13,9 @@ NamesContainer = React.createClass({
   },
   render: function() {
     return (
-            <div className="row">
+            <div className="row"
+                 style={{marginBottom: 20}}
+                >
               {this.props.mems.map(this.renderName)}
             </div>
           );

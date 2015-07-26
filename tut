@@ -17,3 +17,4 @@ meteor add twbs:­bootstrap
 meteor add chuangbo:marked@0.3.5
 
 meteor login
+meteor deploy app

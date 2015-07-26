@@ -10,15 +10,19 @@ Freq = React.createClass({
 
   render: function () {
     var margin = 0;
+    var height = 40;
     var freq = this.props.freq;
     var ar = Session.get('freq');
     if (ar.indexOf(freq) > -1) {
-      margin = 20;
+      margin = 5;
+      height = 50;
     }
 
     return (
-      <div className="col-sm-3" onClick={this.selectFreq} style={{marginTop: margin }}>
-        <img src={this.props.src} />
+      <div className="col-xs-3" onClick={this.selectFreq} style={{marginTop: margin }}>
+        <img src={this.props.src}
+             style={{height: height}}
+            />
       </div>
     );
   }
